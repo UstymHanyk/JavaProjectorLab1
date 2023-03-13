@@ -1,7 +1,10 @@
-package ua.lviv.iot.algo.part1.lab1;
 import lombok.*;
 
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Projector {
     private String model;
     private String resolution;
@@ -26,14 +29,10 @@ public class Projector {
     }
 
     public static void main(String[] args) {
-        Projector projector1 = new Projector();
-        Projector projector2 = new Projector("Sony", "1280x720", 300, "VGA");
-        Projector projector3 = Projector.getInstance();
-        Projector projector4 = Projector.getInstance();
 
-        Projector[] projectors = {projector1, projector2, projector3, projector4};
+        Projector[] projectors = {new Projector(), new Projector("Sony", "1280x720", 300, "VGA"), Projector.getInstance(), Projector.getInstance()};
 
-        for (Projector projector :projectors) {
+        for (Projector projector : projectors) {
             System.out.println(projector);
         }
     }
