@@ -1,5 +1,10 @@
 package ua.lviv.iot.algo.part1.lab2;
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 enum DisplayMode {
     SPORT,
@@ -10,27 +15,28 @@ enum DisplayMode {
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString(callSuper = true)
 public class LampProjector extends AbstractProjector {
     private int lampHours;
     private DisplayMode displayMode;
 
-    public LampProjector(String model, String resolution, String connectedDevice, int lampHours, DisplayMode displayMode){
+    public LampProjector(final String model, final String resolution,
+                         final String connectedDevice,
+                         final int lampHours, final DisplayMode displayMode) {
         super(model, resolution, connectedDevice);
         this.lampHours = lampHours;
         this.displayMode = displayMode;
     }
 
     @Override
-    public int getRemainingWorkingHours(){
+    public int getRemainingWorkingHours() {
         return this.lampHours;
     }
 
-    public void increaseLampHours(int lampHours) {
+    public void increaseLampHours(final int lampHours) {
         this.lampHours += lampHours;
     }
 
 
 }
-
-

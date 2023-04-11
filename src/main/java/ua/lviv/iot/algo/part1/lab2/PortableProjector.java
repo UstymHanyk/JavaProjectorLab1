@@ -1,5 +1,11 @@
 package ua.lviv.iot.algo.part1.lab2;
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 
 @Getter
 @Setter
@@ -11,8 +17,12 @@ public class PortableProjector extends AbstractProjector {
     private int currentBatteryChargeLevelInMahs;
     private double weightInKg;
 
-    public PortableProjector(String model, String resolution, String connectedDevice, int batteryCapacityInMahs, int currentBatteryChargeLevelInMahs, double weightInKg) {
-        super(model, resolution,connectedDevice);
+    public PortableProjector(final String model, final String resolution,
+                             final String connectedDevice,
+                             final int batteryCapacityInMahs,
+                             final int currentBatteryChargeLevelInMahs,
+                             final double weightInKg) {
+        super(model, resolution, connectedDevice);
         this.batteryCapacityInMahs = batteryCapacityInMahs;
         this.currentBatteryChargeLevelInMahs = currentBatteryChargeLevelInMahs;
         this.weightInKg = weightInKg;

@@ -1,5 +1,10 @@
 package ua.lviv.iot.algo.part1.lab2;
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
@@ -11,7 +16,7 @@ public abstract class AbstractProjector {
     private String resolution;
     private String connectedDevice;
 
-    public void addInputDevice(String device) {
+    public void addInputDevice(final String device) {
         this.connectedDevice = device;
     }
 
