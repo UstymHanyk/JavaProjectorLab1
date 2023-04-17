@@ -26,4 +26,11 @@ public abstract class AbstractProjector {
 
     public abstract int getRemainingWorkingHours();
 
+    public String getHeaders() {
+        return "model,resolution,connectedDevice";
+    }
+
+    public String toCSV() {
+        return model + "," + resolution + "," + connectedDevice;
+    }
 }

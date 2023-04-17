@@ -3,6 +3,7 @@ package ua.lviv.iot.algo.part1.lab2;
 import lombok.Generated;
 import lombok.Getter;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -90,6 +91,11 @@ public class ProjectorManager {
         for (AbstractProjector projector : highResolutionProjectors) {
             System.out.println(projector);
         }
+
+
+        ProjectorWriter projectorWriter = new ProjectorWriter();
+        projectorWriter.writeToFile(projectorManager.projectors, "projectors.csv");
+
 
     }
 

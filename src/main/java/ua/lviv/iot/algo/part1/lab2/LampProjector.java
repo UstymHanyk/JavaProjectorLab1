@@ -38,5 +38,13 @@ public class LampProjector extends AbstractProjector {
         this.lampHours += lampHours;
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",lampHours,displayMode";
+    }
 
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + lampHours + "," + displayMode;
+    }
 }
