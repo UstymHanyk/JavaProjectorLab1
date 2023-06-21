@@ -29,4 +29,14 @@ public class LaserProjector extends AbstractProjector {
     public int getRemainingWorkingHours() {
         return laserLifespanInHours;
     }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",laserLifespanInHours,laserBrightnessInLumens";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + laserLifespanInHours + "," + laserBrightnessInLumens;
+    }
 }

@@ -32,4 +32,14 @@ public class PortableProjector extends AbstractProjector {
     public int getRemainingWorkingHours() {
         return this.batteryCapacityInMahs;
     }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ",batteryCapacityInMahs,currentBatteryChargeLevelInMahs,weightInKg";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + batteryCapacityInMahs + "," + currentBatteryChargeLevelInMahs + "," + weightInKg;
+}
 }
